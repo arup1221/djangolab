@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <form method="POST" action ="">
+            Courses
+            {%csrf_token%}
+            <select name="cname">
+                {%for course in courses%}
+                <option value="{{course.id}}">
+                    {{course.course_name}}</option>
+                {%endfor%}
+            </select>
+            <input type="submit" value="search">
+
+        </form>
+    </body>
+</html>
